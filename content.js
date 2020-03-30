@@ -8,7 +8,7 @@ const po = new PerformanceObserver(entryList => {
     if (!entry.hadRecentInput) {
       cls += entry.value;
       // Send the CLS to the background page
-      chrome.runtime.sendMessage({ result: cls });
+      chrome.runtime.sendMessage({ result: cls.toFixed(4) });
       console.log("CLS:", cls);
     }
   }
