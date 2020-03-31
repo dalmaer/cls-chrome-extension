@@ -54,6 +54,7 @@ FID: GREEN < 100 milliseconds, YELLOW < 300ms, RED > 300ms
 
 - Extension is on, but no results for this tab: "CLS" with a [green] square
 - Extension is off, but no results for this tab: "CLS" with a [red] square
+- CLS isn't available (e.g. policy doesn't allow content script injection): "CLS" with a [grey] square
 - CLS is good: Green background with score in badge
 - CLS is adequate: Yellow background with score in badge
 - CLS is poor: Red background with score in badge, or "BAD" if the score is greater than 9999 due to a badge only allowing 4 characters
