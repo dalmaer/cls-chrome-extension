@@ -21,4 +21,17 @@ if (
   });
 
   po.observe({ type: "layout-shift", buffered: true });
+
+  // Send the final score to your analytics back end once
+  // the page's lifecycle state becomes hidden.
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+      // Force any pending records to be dispatched.
+      po.takeRecords();
+      po.disconnect();
+
+      // Log the final score to the console.
+      console.log("CLS (final):", cls);
+    }
+  });
 }
