@@ -22,9 +22,8 @@ if (
 
   po.observe({ type: "layout-shift", buffered: true });
 
-  // Send the final score to your analytics back end once
-  // the page's lifecycle state becomes hidden.
-  document.addEventListener("visibilitychange", () => {
+  // Show the final score once the page's lifecycle state becomes hidden.
+  document.addEventListener("visibilitychange", function once() {
     if (document.visibilityState === "hidden") {
       // Force any pending records to be dispatched.
       po.takeRecords();
@@ -32,6 +31,7 @@ if (
 
       // Log the final score to the console.
       console.log("CLS (final):", cls);
+      document.removeEventListener("visibilitychange", once);
     }
   });
 }
