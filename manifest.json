@@ -1,7 +1,7 @@
 {
   "name": "CLS",
   "description": "Show the Cumulative Layout Shift (CLS) score for the given tab",
-  "version": "0.2",
+  "version": "0.3",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
