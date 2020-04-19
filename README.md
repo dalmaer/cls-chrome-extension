@@ -22,8 +22,7 @@ This is very alpha! I haven't put the extension in the store yet, so, clone the 
 
 ## Bugs / Issues
 
-- As the badge / icon can only show one result across all windows, it will be showing the active tab from the _focused_ window
-- If you don't see results from a page, it may be that the result hasn't come back, or it may be the item below..
+- If you don't see results from a page, it may be that the result hasn't come back, or it may be the item below.
 - If you aren't seeing results on an internal site or see an error `"This page cannot be scripted due to an ExtensionsSettings policy."` it means that your organization is limiting content scripts (often on internal content). To fix this, you need to add a `key: $TOKEN_FROM_YOUR_ORGANIZATION` to the `manifest.json`
 
 # Metrics
@@ -52,7 +51,7 @@ FID: GREEN < 100 milliseconds, YELLOW < 300ms, RED > 300ms
 
 # States
 
-- No results for this tab: "CLS" with a [green] square
+- No results for this tab: "CLS"
 - CLS isn't available (e.g. policy doesn't allow content script injection): "CLS" with a [grey] square
 - CLS is good: Green background with score in badge
 - CLS is adequate: Yellow background with score in badge

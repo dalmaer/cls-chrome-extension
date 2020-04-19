@@ -29,6 +29,11 @@ if (
       po.takeRecords();
       po.disconnect();
 
+      // if still 0, then force the message over to make sure it is tracked
+      if (cls == 0) {
+        chrome.runtime.sendMessage({ result: cls });
+      }
+
       // Log the final score to the console.
       console.log("CLS (final):", cls);
       document.removeEventListener("visibilitychange", once);
