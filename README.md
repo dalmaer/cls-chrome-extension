@@ -4,7 +4,7 @@
 
 This Chrome extension tracks the [CLS (Cumulative Layout Shift)](https://web.dev/cls/ "web.dev article on CLS") metric for pages that you visit as you browse the Web.
 
-There is now a great ![Core Web Vitals extension](https://github.com/GoogleChrome/web-vitals-extension/ "Core Web Vitals Extension") that I recommend!
+There is now a great [Core Web Vitals extension](https://github.com/GoogleChrome/web-vitals-extension/ "Core Web Vitals Extension") that I recommend!
 
 NOTE: There are other extensions for key metrics such as:
 
